@@ -16,8 +16,8 @@ st.set_page_config(page_title='Single Beer Analysis')
 # Load in data
 
 # Desktop file locations
-BEER_df = pd.read_csv(r'C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\Beer_df')
-BEER_TSNE_df = pd.read_csv(r'C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\BEER_TSNE_df')
+BEER_df = pd.read_csv(r'C:\Users\...\Streamlit Beer Page files\Beer_df')
+BEER_TSNE_df = pd.read_csv(r'C:\Users\...\Streamlit Beer Page files\BEER_TSNE_df')
 
 
 ###-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------###
@@ -326,7 +326,7 @@ else:
 
 # Place holder heatmap image
 st.title('Beer Style Attribute Heatmap')
-st.image(r"C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\matplotlib Beer style atribute heatmap.png", caption="Beer style attributes are normal distributed and organized in descending order", use_column_width=True)
+st.image(r"C:\Users\...\matplotlib Beer style atribute heatmap.png", caption="Beer style attributes are normal distributed and organized in descending order", use_column_width=True)
 
 # Interactive heatmap through plotly
 # BEER_Ave_Style_heatmap = BEER_df[['Brewing Style', 'Ave Rating', 'ABV', 'Min IBU', 'Max IBU', 'Style Color Mean (SRM)', 'Astringency', 'Body', 'Alcohol', 'Bitter', 'Sweet', 'Sour', 'Salty', 'Fruits', 'Hoppy', 'Spices', 'Malty']]
@@ -350,7 +350,7 @@ st.write('In this data set 3 attributes are quantitative values from ABV, IBU, a
         'The other 11 attributes are from qualitative values from flavor analysis. '
         'Looking at the listed attributes provided in the data table, as well as rank, in a correlation matrix produces the heat map below.')
 # Place holder heatmap image
-st.image(r"C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\matplotlib Beer atribute corr heatmap.png", caption= "", use_column_width=True)
+st.image(r"C:\Users\...\matplotlib Beer atribute corr heatmap.png", caption= "", use_column_width=True)
 
 st.markdown('''
         Notes on attribute correlations:
@@ -387,7 +387,7 @@ st.markdown('''
 st.write('So what do these correlating factors look like in a paired plot? Well... its not pretty to look at.')
 
 # Place holder pair plot
-st.image(r'C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\Atribute Corr Pairplot.png', use_column_width=True)
+st.image(r'C:\Users\...\Atribute Corr Pairplot.png', use_column_width=True)
 
 st.write('The big idea from the pairplot is to show most of the bivariate analysis data is not liner when including all of the data, therefore correlations between attributes should be taken with a grain of salt.')
 
