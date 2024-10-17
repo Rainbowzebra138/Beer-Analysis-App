@@ -15,20 +15,21 @@ st.set_page_config(page_title='Single Beer Analysis')
 # Load in data
 
 # Desktop file locations
-BEER_df = pd.read_csv(r'C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\Beer_df')
-BEER_TSNE_df = pd.read_csv(r'C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\BEER_TSNE_df')
+# BEER_df = pd.read_csv(r'C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\Beer_df')
+# BEER_TSNE_df = pd.read_csv(r'C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\BEER_TSNE_df')
 
+# laptop file locations
+BEER_df = pd.read_csv(r'C:\Users\jackz\Documents\Homework\Data Sciance\830\Project 1\Streamlit Beer Page files\Beer_df')
+BEER_TSNE_df = pd.read_csv(r'C:\Users\jackz\Documents\Homework\Data Sciance\830\Project 1\Streamlit Beer Page files\BEER_TSNE_df')
 
 ###-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------###
+
 st.title('Good Beer')
 st.write('Welcome to Good Beer. Here we explore a small subset of beer rankings to try and figure out what is a good beer. '
          'Take some time to look through the beer table and explore some beers, or brewers, you may have never herd of. '
          'This list contains information on over 5000 commercial beers from over 1000 different brewerys. ' 
          'When your ready, scroll down to see what attributes are impotent in making a good beer. '
          'Majority of data used in this app was pulled from the form a 2021 log from the website *BeerAdvocate*')
-
-# Desktop file location
-BEER_df = pd.read_csv(r'C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\Beer_df')
 
 BEER_df = BEER_df.rename(columns={'Name': 'Name of Beer', 'Style_x':'Brewing Style', 'Style Color Mean': 'Style Color Mean (SRM)', 'Style Color Var':'Style Color Var (SRM)'})
 
@@ -453,7 +454,11 @@ st.markdown('''
 st.write('So what do these correlating factors look like in a paired plot? Well... its not pretty to look at.')
 
 # Place holder pair plot
-st.image(r'C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\Atribute Corr Pairplot.png', use_column_width=True)
+# DeskTop
+# st.image(r'C:\Users\jrruh\OneDrive\Documents\Homework\Data Sciance\CSME 830\Project 1\Streamlit Beer Page files\Atribute Corr Pairplot.png', use_column_width=True)
+
+# Laptop
+st.image(r'C:\Users\jackz\Documents\Homework\Data Sciance\830\Project 1\Streamlit Beer Page files\Atribute Corr Pairplot.png', use_column_width=True)
 
 st.write('The big idea from the pairplot is to show most of the bivariate analysis data is not liner when including all of the data, therefore correlations between attributes should be taken with a grain of salt.')
 
@@ -662,3 +667,14 @@ st.markdown('''
         Users can set a rank and enter there thoughts about beer. 
         What if differently ranked beers are truly similar to each other but one beer has more post engagement than the other and causes the rank to appear different than what it actually could be?
 ''')
+
+###-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------###
+
+st.title('Closing Arguments')
+
+st.write('''
+         What dose the data tell us about good beer? 
+         According to the 2021 beer rankings good beers take a min/maxing approach to there flavor profiles are ranked higher than balanced and light beers.
+         A Min/Max approach is described as maxing out one or two attributes and ignore the rest of the potential attributes.
+         When it comes to beer making, usually maxing out a single attribute will inturn max or min other attributes due to correlations between attributes.
+         ''')
